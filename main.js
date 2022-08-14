@@ -10,7 +10,7 @@ const scene = new THREE.Scene();
 
 // 背景用の画像の追加
 const textureLoader = new THREE.TextureLoader();
-const bgTexture = textureLoader.load("bg/bg.jpg");
+const bgTexture = textureLoader.load("./bg/bg.jpg");
 scene.background = bgTexture;
  
 //サイズ
