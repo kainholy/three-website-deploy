@@ -1,5 +1,6 @@
 import './style.css'
 import * as THREE from "three"
+import bgImage from "./bg/bg.jpg"
 
  
 //canvas
@@ -10,7 +11,7 @@ const scene = new THREE.Scene();
 
 // 背景用の画像の追加
 const textureLoader = new THREE.TextureLoader();
-const bgTexture = textureLoader.load("./bg/bg.jpg");
+const bgTexture = textureLoader.load(bgImage);
 scene.background = bgTexture;
  
 //サイズ
@@ -106,7 +107,7 @@ animationScripts.push({
 // アニメーションを開始
 function playScrollAnimation() {
   animationScripts.forEach((animation) => {
-    if (scrollParcent >= animation.start && scrollParcent <= animation.end) {
+    if (scrollParcent >= animation.start && scrollParcent <= animation.end + 1) {
       animation.function();
     }
   });
